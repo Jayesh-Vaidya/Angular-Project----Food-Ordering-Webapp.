@@ -1,0 +1,36 @@
+section .underline{
+    width: 10rem;
+    margin-left: 10px;
+    padding: 1px;
+    background-color: #eb2c2c
+}
+section{
+    height: 100vh;
+    background-color: rgb(52, 50, 50);
+}
+
+section .title {
+    color: white !important;
+}
+section .content {
+    color: white !important;
+}
+
+h4{
+    /* color: #ffc404; */
+    color: white !important;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.imgcol{
+    
+    border-radius: 30px;
+    border: 1px solid white !important;
+
+}
+.imgrow{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}

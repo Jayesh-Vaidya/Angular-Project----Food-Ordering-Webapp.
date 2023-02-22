@@ -1,0 +1,24 @@
+<div class="container mb-4">
+  <h5 class="display-6 text-center mb-4">My Orders</h5>
+
+  <table class="table table-light text-center">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Update Status</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of orderData">
+        <td>{{i.name}} x {{i.quantity}}</td>
+        <td>
+          <button class="btn btn-outline-primary active m-2">Preparing</button>
+          <button class="btn btn-outline-primary m-2">Out For Delivery</button>
+          <button class="btn btn-outline-primary m-2">Delivered</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

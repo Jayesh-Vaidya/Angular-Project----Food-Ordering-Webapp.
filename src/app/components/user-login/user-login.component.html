@@ -1,0 +1,143 @@
+<div class="container-fluid grad">
+    <div class="row rr">
+        <div class="col-sm-6 col2">
+            <div class="row forma">
+                <div class="col-auto">
+                    <div *ngIf="showLogin" class="form">
+                        <h2 class=" display-6 text-center mt-2">Sign in into your account</h2>
+                        <form [formGroup]="userLogData" (ngSubmit)=getData(userLogData.value)>
+                            <!-- <div class="form-content mb-4">
+                                <input type="text" class="form-control p-3" placeholder="Email" formControlName="email"
+                                    required>
+                            </div>
+                            <div class="form-content mb-4">
+                                <input type="password" class="form-control p-3" placeholder="Password"
+                                    formControlName="password" required>
+                            </div> -->
+                            <div class="form-content mb-4">
+                              <input type="text" class="form-control p-3" placeholder="Email" formControlName="email" required>
+                              <!-- Logic of Email -->
+                              <div *ngIf="userLogData.get('email').invalid && userLogData.get('email').touched" class="red">
+                                <div *ngIf="userLogData.get('email').errors?.['required']">
+                                  <small>* This Field is required</small>
+                                </div>
+                                <div *ngIf="userLogData.get('email').errors?.['pattern']">
+                                  <small>* Enter a valid Email Address</small>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-content mb-4">
+                              <input type="password" class="form-control p-3" placeholder="Password" formControlName="password"
+                                required>
+                              <!-- Logic of Password -->
+                              <div *ngIf="userLogData.get('password').invalid && userLogData.get('password').touched" class="red">
+                                <div *ngIf="userLogData.get('password').errors?.['required']">
+                                  <small>* This Field is required</small>
+                                </div>
+
+                                <div *ngIf="userLogData.get('password').errors?.['pattern']">
+                                  <small>* Must be 8-20 characters long & must not contain special
+                                    characters.</small>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-content mb-2">
+                                <button type="submit" [disabled]="userLogData.invalid"
+                                    class="btn btn-warning p-3">Login</button>
+                            </div>
+
+                            <div class="form-content">
+                                <p class="anchor"> Don't have an account, <a type="button" (click)="openSignUp()">Create
+                                        Account</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-6 col2">
+            <div class="row forma">
+                <div class="col-auto">
+                    <div *ngIf="!showLogin" class="form">
+                        <h2 class=" display-6 text-center mt-2">Hi, User Create Account</h2>
+                        <form [formGroup]="userData" (ngSubmit)=getSignupData(userData.value)>
+                            <!-- <div class="form-content mb-4">
+                                <input type="text" class="form-control p-3" formControlName="full_name"
+                                    placeholder="Name" required>
+                            </div>
+
+                            <div class="form-content mb-4">
+                                <input type="text" class="form-control p-3" placeholder="Email" formControlName="email"
+                                    required>
+
+                            </div>
+
+                            <div class="form-content mb-4">
+                                <input type="password" class="form-control p-3" placeholder="Password"
+                                    formControlName="password" required>
+
+                            </div> -->
+                            <div class="form-content mb-4">
+                              <input type="text" class="form-control p-3" formControlName="full_name" placeholder="Name" required>
+                              <!-- Logic of Full Name -->
+                              <div *ngIf="userData.get('full_name').invalid && userData.get('full_name').touched" class="red">
+                                <div *ngIf="userData.get('full_name').errors?.['required']">
+                                  <small>* This Field is required</small>
+                                </div>
+                                <div *ngIf="userData.get('full_name').errors?.['pattern']">
+                                  <small>* Aleast 3 letters are required</small>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-content mb-4">
+                              <input type="text" class="form-control p-3" placeholder="Email" formControlName="email" required>
+                              <!-- Logic of Email -->
+                              <div *ngIf="userData.get('email').invalid && userData.get('email').touched" class="red">
+                                <div *ngIf="userData.get('email').errors?.['required']">
+                                  <small>* This Field is required</small>
+                                </div>
+                                <div *ngIf="userData.get('email').errors?.['pattern']">
+                                  <small>* Enter a valid Email Address</small>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-content mb-4">
+                              <input type="password" class="form-control p-3" placeholder="Password" formControlName="password"
+                                required>
+                              <!-- Logic of Password -->
+                              <div *ngIf="userData.get('password').invalid && userData.get('password').touched" class="red">
+                                <div *ngIf="userData.get('password').errors?.['required']">
+                                  <small>* This Field is required</small>
+                                </div>
+
+                                <div *ngIf="userData.get('password').errors?.['pattern']">
+                                  <small>* Must be 8-20 characters long & must not contain special
+                                    characters.</small>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-content mb-2">
+                                <button type="submit" [disabled]="userData.invalid" class="btn btn-warning p-3">Sign
+                                    Up</button>
+                            </div>
+                            <div class="form-content">
+                                <p class="anchor"> Already have an account, <a type="button"
+                                        (click)="openLogin()">Login</a></p>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+

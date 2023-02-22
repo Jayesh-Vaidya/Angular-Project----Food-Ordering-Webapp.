@@ -1,0 +1,53 @@
+
+
+.navbar-brand{
+  color: #eb2c2c !important;
+}
+a:hover{
+  color: #eb2c2c !important;
+
+}
+
+.nav-link .active{
+    color:black;
+}
+
+.nav-content{
+  margin-left: auto;
+}
+.nav-item{
+    padding:0 0.625rem;
+    transition: all 0.3s linear;
+}
+.navbar-toggler:focus {
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+.nav-link{
+    font-size: 0.9375rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+button{
+    padding: 10px 15px;
+}
+.cart span{
+    margin-left: 0.625rem;
+}
+.cart{
+    margin-left:15px
+}
+.user{
+  color: green;
+}
+
+.navbar-toggler{
+  font-size: 0.9375rem;
+}
+
+.carticon
+{
+  margin-right:5px;
+}

@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container{
+   
+    height: 600px;
+    margin: auto;
+}
+.col1{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+
+
+}
+.col2{
+    height: 500px;
+    
+
+    
+
+}
+
+button{
+    width: 100%;
+}
+
+.forma{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form h2{
+    margin-bottom: 50px;
+}
+img{
+    width: 70%;
+    border-radius: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+a{
+    text-decoration: none;
+}
+

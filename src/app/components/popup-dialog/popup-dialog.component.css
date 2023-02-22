@@ -1,0 +1,39 @@
+
+/* --Modal Popup--*/
+.disimg{
+  width:200px;
+  border-radius: 5px;
+  padding:5px;
+  margin-left: 10px;
+}
+
+.disimg img{
+  margin-top: 10px;
+  height: 160px;
+  width: 100%;
+  object-fit:cover;
+  border-radius: 5px;
+}
+
+/* .aa{
+  border: 1px solid red;
+} */
+.ab{
+  height: 270px;
+  /* border: 1px solid black; */
+
+
+}
+.discont{
+  margin-left: 10px;
+}
+.disname{
+  margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+.disprice{
+  color: #23a172;
+  font-size: 20px;
+}

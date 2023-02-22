@@ -1,0 +1,116 @@
+{
+  "seller": [
+    {
+      "full_name": "Jayesh",
+      "email": "jayesh@gmail.com",
+      "password": "neealm271108",
+      "id": 1
+    },
+    {
+      "full_name": "Kartik",
+      "email": "kartik@gmail.com",
+      "password": "kartik1997",
+      "id": 2
+    }
+  ],
+  "user": [
+    {
+      "full_name": "Neelam",
+      "email": "neelam@gmail.com",
+      "password": "jayesh2196",
+      "id": 1
+    },
+    {
+      "full_name": "Neelam",
+      "email": "neelam@gmail.com",
+      "password": "jayesh2196",
+      "id": 2
+    },
+    {
+      "full_name": "Jayesh",
+      "email": "jayesh@gmail.com",
+      "password": "neelam2196",
+      "id": 3
+    },
+    {
+      "full_name": "Dilip",
+      "email": "dilip@gmail.com",
+      "password": "Dilip1234",
+      "id": 4
+    }
+  ],
+  "items": [
+    {
+      "name": "Veg Schezwan Noodles",
+      "price": "150",
+      "origin": "Chinese",
+      "description": "Serves 1 | A spicy preparation with vegetables and noodles tossed in a hot and spicy schezwan sauce.",
+      "url": "https://i.postimg.cc/6Q8mWDvt/Noodles.jpg",
+      "id": 1
+    },
+    {
+      "name": "Masala Dosa",
+      "price": "70",
+      "origin": "South Indian",
+      "description": "Serves 1 |  Masala dosa are crispy, soft, savory and healthy crepes made with a rice and lentil batter.",
+      "url": "https://i.postimg.cc/x1RzTXPv/Masala-Dosa.jpg",
+      "id": 2
+    },
+    {
+      "name": "Pav Bhaji",
+      "price": "100",
+      "origin": "Indian",
+      "description": "Serves 1 | Two butter-laden pav accompanied by a delicious and healthy gravy of smashed vegetables and topped with dollops of butter, extra onion and piece of lemon.",
+      "url": "https://i.postimg.cc/XJxFmRL4/Pav-Bhaji.jpg",
+      "id": 3
+    },
+    {
+      "name": "Misal Pav",
+      "price": "120",
+      "origin": "Maharashtrian",
+      "description": "Serves 1 | A popular Maharashtrian delicacy with sprouts topped with flavorsome gravy served with soft pav, and onion.",
+      "url": "https://i.postimg.cc/c6GsmH3H/Misal-Pav.jpg",
+      "id": 4
+    },
+    {
+      "name": "Palak Paneer",
+      "price": "160",
+      "origin": "Punjabi",
+      "description": "Serves 1 | Palak paneer is an Indian dish consisting of paneer in a thick paste made from puréed spinach.",
+      "url": "https://i.postimg.cc/X76GffHK/Palak-Paneer.jpg",
+      "id": 5
+    },
+    {
+      "name": "Paneer Kadai",
+      "price": "210",
+      "origin": "Punjabi",
+      "description": "Serves 1 | Indian Cottage Cheese and bell peppers are cooked in freshly ground spicy masala.",
+      "url": "https://i.postimg.cc/LXZ5f5j0/Paneer-Kadai.jpg",
+      "id": 6
+    },
+    {
+      "name": "Tawa Pulao",
+      "price": "140",
+      "origin": "Indian",
+      "description": "Serves 1 | A tawa fried dish containing ghee-roasted veggies and flavourful rice with an undertone of aromatic spices.",
+      "url": "https://i.postimg.cc/xCGNHWhL/Tawa-pulao.jpg",
+      "id": 7
+    },
+    {
+      "name": "Jeera Rice",
+      "price": "120",
+      "origin": "Indian",
+      "description": "Serves 1 | A very popular dish in the Indian subcontinent, consisting of rice and cumin seeds.",
+      "url": "https://i.postimg.cc/BZVPjWDz/Jeera-Rice.jpg",
+      "id": 8
+    },
+    {
+      "name": "Veg Kolhapuri",
+      "price": "140",
+      "origin": "Maharashtra",
+      "description": "Serves 1 | Veg Kolhapuri is a dish from the city of Kolhapur, India consisting of mixed vegetables in a thick, spiced gravy.\n",
+      "url": "https://i.postimg.cc/YCb7VK13/Veg-Kolhapuri.jpg",
+      "id": 9
+    }
+  ]
+}

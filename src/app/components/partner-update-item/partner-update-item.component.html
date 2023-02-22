@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-auto w-50">
+            <h3 class="text-center mb-4">Update Item</h3>
+            
+                <form #myForm="ngForm" (ngSubmit)=getData(myForm.value)>
+
+                <div class="form-group mb-4">
+                <input type="text" name="name" #refName="ngModel" class="form-control"
+                placeholder="Enter Name" ngModel="{{itemData?.name}}">
+                </div>
+
+                <div class="form-group mb-4">
+                    <input type="text" name="price" #refName="ngModel" class="form-control"
+                    placeholder="Enter Price (₹)" ngModel="{{itemData?.price}}">
+                </div>
+                <div class="form-group mb-4">
+                    <input type="text" name="origin" #refName="ngModel" class="form-control"
+                    placeholder="Enter Origin" ngModel="{{itemData?.origin}}">
+                </div>
+                <div class="form-group mb-4">
+                    <textarea type="text" name="description" #refName="ngModel" class="form-control"
+                    placeholder="Description" ngModel="{{itemData?.description}}"></textarea>
+                </div>
+
+              <div class="form-group mb-4">
+                <input type="text" name="url" #refName="ngModel" class="form-control"
+                placeholder="Image Url" ngModel="{{itemData?.url}}">
+            </div>
+                <div>
+                <button type="submit"class="btn btn-warning p-3">Update Item</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

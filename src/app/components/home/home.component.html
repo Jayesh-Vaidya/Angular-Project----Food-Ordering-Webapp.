@@ -1,0 +1,147 @@
+<!-- Autoplaying Carosuel -->
+
+<!-- Autoplay -->
+<div class="home" id="home">
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../../assets/Images/img-bg-1.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../../../assets/Images/img-bg-2.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../../../assets/Images/img-bg-3.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- Ends -->
+<!-- Menu Explore -->
+<section class="menu-section">
+  <div class=" container item-wrapper">
+    <div class="menuspacing">
+    </div>
+    <h5 class="display-6 head text-center">Explore Menu</h5>
+    <div class="row">
+      <div class="col-sm-4 column" *ngFor="let item of menu">
+        <div class="item">
+          <img src="{{item.url}}" alt="">
+          <div class="item-name mt-1">
+            <p class="name p-1 text-center">{{item.name}}</p>
+          </div>
+          <div class="wrap">
+            <p><i class="fa fa-square mark m-1" aria-hidden="true"></i> | Serves-1 |<strong class="price"> ₹ {{item.price}}</strong></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="d-flex justify-content-center mt-4">
+  <button type="button" class="btn btn-success mt-4 orderbtn" routerLink="/menu">Explore More</button>
+</div>
+
+<!-- Reviews -->
+<section class="review-section" id="review">
+  <div class=" container item-wrapper">
+    <div class="spacing mt-2 text-center">
+      <h5 class="display-6 head text-center">---</h5>
+    </div>
+    <h5 class="display-6 head text-center mt-4">Reviews</h5>
+    <div class="row reviewmargin">
+      <div class="col-sm-4 column">
+        <div class="rev">
+          <div class="revstar my-3">
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+          </div>
+          <div class="item-name mt-1">
+            <p class="p-1 text-center">Very impressed with your delivery. Thank you so much. It's a boon for people like
+              us who miss authentic food with which we have grown up.</p>
+          </div>
+          <div class="item-name mt-1">
+            <p class="name text-center">- Yogesh</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4 column">
+        <div class="rev">
+          <div class="revstar my-3">
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+          </div>
+          <div class="item-name mt-1">
+            <p class="p-1 text-center"> When we think about celebrations, Foodicious is always our first option and it never disappoints. The quality and tastes of everything was outstanding.</p>
+          </div>
+          <div class="item-name mt-1">
+            <p class="name text-center">- Kartik</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4 column">
+        <div class="rev">
+          <div class="revstar my-3">
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+          </div>
+          <div class="item-name mt-1">
+            <p class="p-1 text-center">I have to say, I enjoyed every single bite of the meal in Foodicious. I had a 3 course meal, the quality is good and the price is also reasonable.</p>
+          </div>
+          <div class="item-name mt-1">
+            <p class="name text-center">- Dilip</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- About Us -->
+
+<section class=" our-menu p-4 mt-4" id="about">
+  <div class="spacing mt-2 text-center">
+    <h5 class="display-6 head text-center">---</h5>
+  </div>
+  <div class="jumbotron title d-flex justify-content-center">
+    <h1 class="display-6 head">Who Are We..?</h1>
+  </div>
+
+  <div class="row aboutmargin">
+    <div class="col-lg-7 col-md-12 mb-lg-0 mb-2">
+      <div class="container m-4">
+        <p class="lead content ">Foodicious is Nashik based cloud kitchen started in 2016. We at Foodicious aimes to prepare and delivery fresh authentic dishes right at your doorsteps.
+          We are currently focusing on delivering the Indian and Regional authentic recipes prepared by our expert Chefs. </p>
+      </div>
+    </div>
+    <div class="col-lg-5 col-md-12 mb-lg-0 mb-2">
+      <div class="card border-0">
+        <img src="../../../assets/Images/img-chef-1.jpg" class="img-fluid" alt="chef">
+      </div>
+    </div>
+  </div>
+
+
+</section>
+</div>
+
+

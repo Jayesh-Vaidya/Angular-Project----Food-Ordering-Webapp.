@@ -1,0 +1,33 @@
+<div class="container mb-4">
+  <h5 class="display-6 text-center mb-2">Orders</h5>
+
+  <table class="table table-light text-center">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price(₹)</th>
+        <th>Order</th>
+        <th>Update Status</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of orderData">
+        <td>{{i.name}}</td>
+        <td>{{i.price}}</td>
+        <td>
+          <button class="btn btn-outline-success m-2">Accept</button>
+          <button class="btn btn-outline-danger m-2">Decline</button>
+        </td>
+        <td>
+          <button class="btn btn-outline-primary active m-2">Preparing</button>
+          <button class="btn btn-outline-primary m-2">Out For Delivery</button>
+          <button class="btn btn-outline-primary m-2">Delivered</button>
+
+          <!-- <button class="btn btn-outline-danger" (click)="deleteItem(i.id)"><i class="fa fa-trash" aria-hidden="true"></i></button> -->
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

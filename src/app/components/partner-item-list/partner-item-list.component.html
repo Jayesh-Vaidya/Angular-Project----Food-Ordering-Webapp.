@@ -1,0 +1,30 @@
+<div class="container mb-4">
+    
+<table class="table table-light text-center">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price(₹)</th>
+            <th>Origin</th>
+            <th>Description</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of listItem">
+            <td><img src="{{i.url}}" alt="image"></td>
+            <td>{{i.name}}</td>
+            <td>{{i.price}}</td>
+            <td>{{i.origin}}</td>
+            <td>{{i.description}}</td>
+            <td><a routerLink="/partner-update-item/{{i.id}}"><button class="btn btn-outline-primary my-2"><i class="fa fa-edit" aria-hidden="true"></i></button></a>
+            <!-- <td><a routerlink="partner-update-item"><button class="btn btn-outline-primary mb-1" ><i class="fa fa-edit" aria-hidden="true"></i></button></a>  -->
+                <button class="btn btn-outline-danger" (click)="deleteItem(i.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+</div>

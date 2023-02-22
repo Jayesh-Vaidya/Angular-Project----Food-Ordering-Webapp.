@@ -1,0 +1,82 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top shadow p-4 mb-5">
+
+  <a class="navbar-brand ms-2" href="#" routerLink="/">
+    <img src="./../../../assets/Images/img-logo.jpg" width="60" height="30" class="img-fuild" alt="logo">
+    Foodicious</a>
+
+  <button class="navbar-toggler mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    <!-- <i class="fas fa stream navbar-toggler-icon"></i> -->
+  </button>
+  <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+    <div class="nav-content" [ngSwitch]="menuType">
+      <ul *ngSwitchCase="'default'" class="navbar-nav ms-auto me-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"  (click)="toReview()" >Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="" (click)="toAbout()" >About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="menu">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="partneraccount"><i class="fa fa-laptop" aria-hidden="true"></i> Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="userlogin"><i class="fa fa-user" aria-hidden="true"></i>
+            Login</a>
+        </li>
+      </ul>
+      <ul *ngSwitchCase="'user'" class="navbar-nav ms-auto me-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="menu">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="usermyorder"   (click)="getCartQtn()"  >My Orders</a>
+        </li>
+
+        <li class="cart">
+          <a class="nav-link user"><i class="fa fa-user" aria-hidden="true"></i>
+            Hi, {{userName}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" (click)="userlogout()">Logout</a>
+        </li>
+        <div class="cart">
+          <!-- <a class="nav-link btn  cart me-4" routerLink="cart" ><i class="fas fa-shopping-basket carticon"></i>
+            Cart <span class="badge badge-light">4</span></a> -->
+            <button type="button" class="btn btn-success btn-sm " routerLink="cart"><i class="fas fa-shopping-basket carticon"></i>
+              Cart <span class="badge badge-warning">{{showqtn}}</span>
+           </button>
+
+        </div>
+
+      </ul>
+      <ul *ngSwitchCase="'partner'" class="navbar-nav ms-auto me-3">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="partner-items-list">Item List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" routerLink="partner-add-items"><i
+              class="fa fa-cutlery" aria-hidden="true"></i> Add Item</a>
+        </li>
+        <li class="cart">
+          <a class="nav-link user"><i class="fa fa-laptop" aria-hidden="true"></i>
+            Admin - {{partnerName}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

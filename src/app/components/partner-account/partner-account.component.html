@@ -1,0 +1,121 @@
+<div class="container-fluid grad">
+  <div class="row rr">
+    <div class="col-md-6 col2">
+      <div class="row forma">
+        <div class="col-auto">
+          <div *ngIf="showLogin" class="form">
+            <h2 class=" display-6 text-center mt-2">Sign in into your account</h2>
+            <form [formGroup]="partLogData" (ngSubmit)=getLogData(partLogData.value)>
+
+              <div class="form-content mb-4">
+                <input type="text" class="form-control p-3" placeholder="Email" formControlName="email" required>
+                <!-- Logic of Email -->
+                <div *ngIf="partLogData.get('email').invalid && partLogData.get('email').touched" class="red">
+                  <div *ngIf="partLogData.get('email').errors?.['required']">
+                    <small>* This Field is required</small>
+                  </div>
+                  <div *ngIf="partLogData.get('email').errors?.['pattern']">
+                    <small>* Enter a valid Email Address</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-content mb-4">
+                <input type="password" class="form-control p-3" placeholder="Password" formControlName="password"
+                  required>
+                <!-- Logic of Password -->
+                <div *ngIf="partLogData.get('password').invalid && partLogData.get('password').touched" class="red">
+                  <div *ngIf="partLogData.get('password').errors?.['required']">
+                    <small>* This Field is required</small>
+                  </div>
+
+                  <div *ngIf="partLogData.get('password').errors?.['pattern']">
+                    <small>* Must be 8-20 characters long & must not contain special
+                      characters.</small>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-content mb-2">
+                <button type="submit" [disabled]="partLogData.invalid" class="btn btn-warning p-3">Login</button>
+              </div>
+
+              <div class="form-content">
+                <p class="anchor"> Don't have an account, <a type="button" (click)="openSignUp()">Create
+                    Account</a></p>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-6 col2">
+      <div class="row forma">
+        <div class="col-auto">
+          <div *ngIf="!showLogin" class="form">
+            <h2 class=" display-6 text-center mt-2">Create Admin Account</h2>
+            <form [formGroup]="partData" (ngSubmit)=getData(partData.value)>
+              <div class="form-content mb-4">
+                <input type="text" class="form-control p-3" formControlName="full_name" placeholder="Name" required>
+                <!-- Logic of Full Name -->
+                <div *ngIf="partData.get('full_name').invalid && partData.get('full_name').touched" class="red">
+                  <div *ngIf="partData.get('full_name').errors?.['required']">
+                    <small>* This Field is required</small>
+                  </div>
+                  <div *ngIf="partData.get('full_name').errors?.['pattern']">
+                    <small>* Aleast 3 letters are required</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-content mb-4">
+                <input type="text" class="form-control p-3" placeholder="Email" formControlName="email" required>
+                <!-- Logic of Email -->
+                <div *ngIf="partData.get('email').invalid && partData.get('email').touched" class="red">
+                  <div *ngIf="partData.get('email').errors?.['required']">
+                    <small>* This Field is required</small>
+                  </div>
+                  <div *ngIf="partData.get('email').errors?.['pattern']">
+                    <small>* Enter a valid Email Address</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-content mb-4">
+                <input type="password" class="form-control p-3" placeholder="Password" formControlName="password"
+                  required>
+                <!-- Logic of Password -->
+                <div *ngIf="partData.get('password').invalid && partData.get('password').touched" class="red">
+                  <div *ngIf="partData.get('password').errors?.['required']">
+                    <small>* This Field is required</small>
+                  </div>
+
+                  <div *ngIf="partData.get('password').errors?.['pattern']">
+                    <small>* Must be 8-20 characters long & must not contain special
+                      characters.</small>
+                  </div>
+                </div>
+              </div>
+              <div class="form-content mb-2">
+                <button type="submit" [disabled]="partData.invalid" class="btn btn-warning p-3">Sign
+                  Up</button>
+              </div>
+              <div class="form-content">
+                <p class="anchor"> Already have an account, <a type="button" (click)="openLogin()">Login</a></p>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>
